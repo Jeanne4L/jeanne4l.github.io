@@ -3,13 +3,17 @@
     font-family: 'robotoregular';
 }
 
-footer h5 {
+footer h5, h1 {
     font-family: 'shrikhandregular';
 }
 
-h3 {
+h3, .menu h2 {
     font-style: normal;
     font-family: 'robotothin';
+}
+
+.menu__bubble h3 {
+    font-family: 'robotoregular';
 }
 
 body {
@@ -49,6 +53,10 @@ ul {
 .new {
     background-color: $tertiaryColor;
     color: darken($tertiaryColor, 40%);
+}
+
+.line {
+    background-color: $tertiaryColor;
 }
 
 footer {

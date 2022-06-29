@@ -81,9 +81,8 @@ article {
 }
 
 main {
-    position: relative;
     img {
-        position: absolute;
+        position: relative;
         top: 0;
         z-index: 1;
         width: 100%;
@@ -91,11 +90,74 @@ main {
         object-fit: cover;
     }
     section {
-    position: absolute;
-    z-index: 2;
-    top: 220px;
-    width: 100%;
-    border-radius: 40px 40px 0 0;
-    background-color: $backgroundColor;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        top: -45px;
+        width: 100%;
+        border-radius: 40px 40px 0 0;
+        background-color: $backgroundColor;
+        padding-top: 30px;
+        margin-bottom: -40px;
+        article {
+            padding: 25px 0 0 0;
+        }
+        .container__title {
+            justify-content: flex-start;
+            h1 {
+                margin: 0;
+                font-size: 1.8rem;
+            }
+            .menu-heart {
+                position: absolute;
+                right: 40px;
+                font-size: 1.6rem;
+            }
+            .fa-solid {
+                color: $primaryColor;
+                opacity: 0;
+            }
+        }
+        .menu h2 {
+            text-transform: uppercase;
+            font-size: 1.05rem;
+            margin-bottom: 7px;
+        }
+        .line {
+            width: 45px;
+            height: 3px;
+        }
+        .menu__bubble {
+            justify-content: space-between;
+            align-items: flex-end;
+            background-color: white;
+            border-radius: 15px;
+            padding: 15px;
+            margin-top: 15px;
+            box-shadow: 0px 5px 15px -3px darken($backgroundColor, 25%);
+            .title {
+                width: 305px;
+                h3 {
+                    margin: 0;
+                    font-size: 1.2rem;
+                    text-overflow: ellipsis;
+                }
+                p {
+                    font-size: 1.03rem;
+                    margin: 5px 0 0 0;
+                    text-overflow: ellipsis;
+                }
+            }
+            span {
+                font-weight: bold;
+            }
+            .menu__check {
+                width: 0;
+                height: 100%;
+                overflow: hidden;
+                
+            }
+        }
     }
 }
