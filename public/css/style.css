@@ -201,8 +201,8 @@ main section {
   width: 100%;
   border-radius: 40px 40px 0 0;
   background-color: #F6F6F6;
-  padding-top: 30px;
-  margin-bottom: -40px;
+  padding: 30px 0 70px 0;
+  margin-bottom: -45px;
 }
 main section article {
   padding: 25px 0 0 0;
@@ -312,7 +312,6 @@ figure figcaption .fa-solid {
 }
 
 .btn {
-  align-items: center;
   border-radius: 50px;
   width: 220px;
   height: 50px;
@@ -321,6 +320,12 @@ figure figcaption .fa-solid {
   background: linear-gradient(#FF79DA, #9356DC);
   font-size: 1.03rem;
   box-shadow: 0px 5px 15px -3px #909090;
+}
+.btn--center {
+  margin: 50px auto 0 auto;
+}
+.btn--smaller {
+  width: 190px;
 }
 
 footer {
