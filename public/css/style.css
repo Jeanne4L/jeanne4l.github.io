@@ -247,13 +247,38 @@ main section .menu__bubble {
   align-items: flex-end;
   background-color: white;
   border-radius: 15px;
-  padding: 15px;
   margin-top: 15px;
   box-shadow: 0px 5px 15px -3px #b6b6b6;
 }
+main section .menu__bubble:hover > .menu__check {
+  width: 60px;
+}
+main section .menu__bubble:hover > .menu__check .fa-circle-check {
+  transform: translateX(0) rotate(360deg);
+}
+main section .menu__bubble .menu__check {
+  background-color: #99E2D0;
+  color: white;
+  height: 76.01px;
+  width: 0;
+  border-radius: 0 14px 14px 0;
+  overflow: hidden;
+  transition-duration: 700ms;
+}
+main section .menu__bubble .menu__check .fa-circle-check {
+  font-size: 1.2rem;
+  transition: transform 700ms;
+  width: 23px;
+  height: 23px;
+}
+main section .menu__bubble .bubble__text {
+  justify-content: space-between;
+  padding: 15px;
+  width: 95%;
+}
 main section .menu__bubble .title {
-  width: 75%;
-  max-width: 305px;
+  width: 80%;
+  max-width: 246px;
 }
 main section .menu__bubble .title h3 {
   margin: 0;
@@ -269,17 +294,8 @@ main section .menu__bubble .title p {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-main section .menu__bubble .title:hover + .menu__check {
-  transform: scaleX(3);
-}
 main section .menu__bubble span {
   font-weight: bold;
-}
-main section .menu__bubble .menu__check {
-  width: 5px;
-  height: 100%;
-  opacity: 0;
-  overflow: hidden;
 }
 
 figure {

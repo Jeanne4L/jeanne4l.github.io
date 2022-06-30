@@ -143,12 +143,39 @@ main {
             align-items: flex-end;
             background-color: white;
             border-radius: 15px;
-            padding: 15px;
             margin-top: 15px;
             box-shadow: 0px 5px 15px -3px darken($backgroundColor, 25%);
+            
+            &:hover > .menu__check {
+                width: 60px;
+                .fa-circle-check {
+                    transform: translateX(0) rotate(360deg);
+                }
+            }
+            .menu__check {
+                background-color: $tertiaryColor;
+                color: white;
+                height: 76.01px;
+                width: 0;
+                border-radius: 0 14px 14px 0;
+                overflow: hidden;
+                transition-duration: 700ms;
+                
+                .fa-circle-check {
+                    font-size: 1.2rem;
+                    transition: transform 700ms;
+                    width: 23px;
+                    height: 23px;
+                }
+            }
+            .bubble__text {
+                justify-content: space-between;
+                padding: 15px;
+                width: 95%;
+            }
             .title {
-                width: 75%;
-                max-width: 305px;
+                width: 80%;
+                max-width: 246px;
                 h3 {
                     margin: 0;
                     font-size: 1.2rem;
@@ -163,18 +190,9 @@ main {
                     text-overflow: ellipsis;
                     overflow: hidden;
                 }
-                &:hover + .menu__check {
-                    transform: scaleX(3);
-                }
             }
             span {
                 font-weight: bold;
-            }
-            .menu__check {
-                width: 5px;
-                height: 100%;
-                opacity: 0;
-                overflow: hidden;
             }
         }
     }
