@@ -214,9 +214,15 @@ main section .container__title h1 {
   margin: 0;
   font-size: 1.8rem;
 }
+main section .container__title .title-heart {
+  flex: 1;
+  min-width: 60px;
+  height: 33.11px;
+  position: relative;
+}
 main section .container__title .menu-heart {
   position: absolute;
-  right: 40px;
+  right: 20px;
   font-size: 1.6rem;
 }
 main section .container__title .fa-solid {
@@ -246,24 +252,33 @@ main section .menu__bubble {
   box-shadow: 0px 5px 15px -3px #b6b6b6;
 }
 main section .menu__bubble .title {
-  width: 305px;
+  width: 75%;
+  max-width: 305px;
 }
 main section .menu__bubble .title h3 {
   margin: 0;
   font-size: 1.2rem;
+  white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
 }
 main section .menu__bubble .title p {
   font-size: 1.03rem;
   margin: 5px 0 0 0;
+  white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
+}
+main section .menu__bubble .title:hover + .menu__check {
+  transform: scaleX(3);
 }
 main section .menu__bubble span {
   font-weight: bold;
 }
 main section .menu__bubble .menu__check {
-  width: 0;
+  width: 5px;
   height: 100%;
+  opacity: 0;
   overflow: hidden;
 }
 
