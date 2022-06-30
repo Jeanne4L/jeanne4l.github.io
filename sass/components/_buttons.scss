@@ -2,11 +2,16 @@
     border-radius: 50px;
     width: 220px;
     height: 50px;
-    color: white;
     border: none;
-    background: linear-gradient($secondaryColor, $primaryColor);
     font-size: 1.03rem;
-    box-shadow: 0px 5px 15px -3px darken($backgroundColor, 40%);
+    @include btn-background-color(basic);
+    &:hover {
+        @include btn-background-color(hover);
+    }
+    a {
+        color: white;
+        text-align: center;
+    }
     &--center {
         margin: 50px auto 0 auto;
     }
@@ -14,3 +19,4 @@
         width: 190px;
     }
 }
+

@@ -1,0 +1,5 @@
+@mixin btn-background-color($state) {
+    $btn: map-get($btn-background-color, $state);
+    background: map-get($btn, bg);
+    box-shadow: map-get($btn, shadow);
+}
