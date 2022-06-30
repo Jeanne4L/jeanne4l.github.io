@@ -222,6 +222,10 @@ main section .container__title .menu-heart {
 main section .container__title .fa-solid {
   color: #9356DC;
   opacity: 0;
+  transition: opacity 400ms;
+}
+main section .container__title .fa-solid:hover {
+  opacity: 1;
 }
 main section .menu h2 {
   text-transform: uppercase;
@@ -309,6 +313,10 @@ figure figcaption .heart {
 figure figcaption .fa-solid {
   color: #9356DC;
   opacity: 0;
+  transition: opacity 400ms;
+}
+figure figcaption .fa-solid:hover {
+  opacity: 1;
 }
 
 .btn {
