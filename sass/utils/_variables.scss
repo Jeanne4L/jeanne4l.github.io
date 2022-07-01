@@ -3,3 +3,7 @@ $secondaryColor: #FF79DA;
 $tertiaryColor: #99E2D0;
 $backgroundColor: #F6F6F6;
 $footerBackground: #353535;
+
+$anim-dur: 1300ms;
+$circle-num: 3;
+$anim-delay: calc($anim-dur / $circle-num);

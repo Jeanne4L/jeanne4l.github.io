@@ -19,6 +19,100 @@
   font-weight: normal;
   font-style: normal;
 }
+@keyframes loader-screen {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-3000px);
+  }
+}
+@keyframes circle {
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  75% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.screen-loader {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loader-screen 1ms 3000ms linear forwards;
+  z-index: 10;
+}
+.screen-loader .loader {
+  display: flex;
+  justify-content: space-evenly;
+  width: 150px;
+  height: 100px;
+}
+.screen-loader .loader__circle {
+  position: relative;
+  z-index: 2;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  animation: circle 1300ms ease-in-out;
+}
+.screen-loader .loader__circle--1 {
+  animation-delay: 433.3333333333ms;
+}
+.screen-loader .loader__circle--2 {
+  animation-delay: 866.6666666667ms;
+}
+.screen-loader .loader__circle--3 {
+  animation-delay: 1300ms;
+}
+
+/*$btn-background-color: (
+    basic: (
+        bg: linear-gradient($secondaryColor, $primaryColor),
+        shadow: 0px 5px 15px -3px darken($backgroundColor, 40%),
+    ),
+    hover: (
+        bg: linear-gradient(
+            lighten($secondaryColor, 2%),
+            lighten($primaryColor, 2%)),
+        shadow: 0px 5px 15px 0px darken($backgroundColor, 42%),     
+    )
+);*/
+/*$btn-background-opacity: (
+    basic: (
+        opacity: 1,
+    ),
+    hover: (
+        opacity: 0.9,
+    )
+);*/
+/*@mixin btn-background-color($state) {
+    $btn: map-get($btn-background-color, $state);
+    background: map-get($btn, bg);
+    box-shadow: map-get($btn, shadow);
+}*/
+/*@mixin btn-background-opacity($state) {
+    $opacity: map-get($btn-background-opacity, $state);
+    opacity: map-get($opacity, opacity);
+}*/
 * {
   box-sizing: border-box;
   font-family: "robotoregular";
@@ -351,17 +445,31 @@ figure figcaption .fa-solid:hover {
 }
 
 .btn {
+  position: relative;
   border-radius: 50px;
   width: 220px;
   height: 50px;
   border: none;
   font-size: 1.03rem;
-  background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0px 5px 15px -3px #909090;
+  background: linear-gradient(#FF79DA, #9356DC);
+  opacity: 1;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  box-shadow: 0px 5px 15px -3px #909090;
+  opacity: 0;
 }
 .btn:hover {
-  background: linear-gradient(#ff83dd, #985ede);
-  box-shadow: 0px 5px 15px 0px #8b8b8b;
+  opacity: 0.9;
+}
+.btn:hover::after {
+  opacity: 1;
 }
 .btn a {
   color: white;

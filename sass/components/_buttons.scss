@@ -1,12 +1,28 @@
 .btn {
+    position: relative;
     border-radius: 50px;
     width: 220px;
     height: 50px;
     border: none;
     font-size: 1.03rem;
-    @include btn-background-color(basic);
+    box-shadow: 0px 5px 15px -3px darken($backgroundColor, 40%);
+    background: linear-gradient($secondaryColor, $primaryColor);
+    opacity: 1;
+    &::after {
+        content: "";
+        position: absolute;
+        border-radius: 50px;
+        width: 100%;
+        height: 100%;      
+        background-color: transparent;
+        box-shadow: 0px 5px 15px -3px darken($backgroundColor, 40%);
+        opacity: 0;
+    }
     &:hover {
-        @include btn-background-color(hover);
+        opacity: 0.9;
+        &::after {    
+            opacity: 1;
+        }
     }
     a {
         color: white;
