@@ -11,26 +11,30 @@
     </head>
 
     <body>
+
+<!--loading spinner-->
+        <div class="screen-loader">
+            <div class="loader">
+                <div class="loader__circle loader__circle--1"></div>
+                <div class="loader__circle loader__circle--2"></div>
+                <div class="loader__circle loader__circle--3"></div>
+            </div>
+        </div>
+
 <!--header-->
-        <header class="flex">
-            <img src="../images/ohmyfood.png" alt="logo">
+        <header>
+            <div class="container">
+                <img src="../images/ohmyfood.png" alt="logo">
+            </div>
         </header>
 
+<!-- Location -->
         <div class="location flex">
             <p>
                 <i class="fa-solid fa-location-dot"></i>
                 <span>Paris, Belleville</span>
             </p>
         </div>
-
-<!--loading spinner-->
-<div class="screen-loader">
-    <div class="loader">
-        <div class="loader__circle loader__circle--1"></div>
-        <div class="loader__circle loader__circle--2"></div>
-        <div class="loader__circle loader__circle--3"></div>
-    </div>
-</div>
 
 <!--Reservation-->
         <section class="reservation flex gray">
@@ -44,7 +48,7 @@
         </section>
 
 <!--Functioning-->
-        <article>
+        <article class="functioning">
             <section class="container">
                 <h2>Fonctionnement</h2>
                 <div class="steps flex">
@@ -68,7 +72,7 @@
         </article>
 
 <!--Restaurant-->
-        <article class="gray">
+        <article class="restaurant gray">
             <section class="container">
                 <h2>Restaurants</h2>
                 <div class="container__restaurant-cards">
