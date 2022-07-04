@@ -7,3 +7,8 @@ $footerBackground: #353535;
 $anim-dur: 1300ms;
 $circle-num: 3;
 $anim-delay: calc($anim-dur / $circle-num);
+
+$progress-dur: 2000ms;
+$dish-num: 10;
+$dish-display: calc($anim-dur / $dish-num);
+

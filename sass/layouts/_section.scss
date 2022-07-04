@@ -41,6 +41,12 @@ article {
         max-width: 410px;
         padding-left: 12.5px;
         margin: 0 auto;
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 1600px;
+            padding: 6.5px 0 0 6.5px;
+        }
         .step {
             position: relative;
             justify-content: flex-start;
@@ -51,6 +57,13 @@ article {
             margin-bottom: 25px;
             padding-left: 35px;
             box-shadow: 0px 5px 15px -3px darken($backgroundColor, 25%);
+            @include tablet {
+                flex-direction: column;
+                justify-content: center;
+                height: 125px;
+                width: 30%;
+                padding: 15px;
+            }
             .number {
                 position: absolute;
                 left: -12.5px;
@@ -61,6 +74,11 @@ article {
                 border-radius: 50px;
                 width: 25px;
                 height: 25px;
+                @include tablet {
+                    top: -6.5px;
+                    left: -6.5px;
+                    font-size: 1rem;
+                }
             }
             .fa-solid {
                 font-size: 1.3rem;
@@ -75,6 +93,11 @@ article {
                 margin-left: 35px;
                 font-size: 1rem;
                 font-weight: bold;
+                @include tablet {
+                    margin: 15px 0 0 0;
+                    text-align: center;
+                    font-size: 1.15rem;
+                }
             }
         }
     }    
@@ -99,15 +122,27 @@ main {
         border-radius: 40px 40px 0 0;
         background-color: $backgroundColor;
         padding: 30px 0 70px 0;
-        margin-bottom: -45px;
+        margin-bottom: -45px;    
+        @include tablet {
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 550px;
+        }
         article {
             padding: 25px 0 0 0;
+            @include tablet {
+                padding-top: 35px;
+            }
         }
         .container__title {
             justify-content: flex-start;
             h1 {
                 margin: 0;
                 font-size: 1.8rem;
+                @include tablet {
+                    font-size: 1.9rem;
+                }
             }
             .title-heart {
                 flex: 1;
@@ -133,6 +168,9 @@ main {
             text-transform: uppercase;
             font-size: 1.05rem;
             margin-bottom: 7px;
+            @include tablet {
+                font-size: 1.15rem;
+            }
         }
         .line {
             width: 45px;
@@ -142,10 +180,19 @@ main {
             justify-content: space-between;
             align-items: flex-end;
             background-color: white;
+            margin: 15px auto 0 auto;
             border-radius: 15px;
-            margin-top: 15px;
             box-shadow: 0px 5px 15px -3px darken($backgroundColor, 25%);
-            
+            animation: dishes $progress-dur ease-in-out forwards;
+            opacity: 0;
+            @for $i from 1 through $dish-num {
+                &--#{$i} {
+                    animation-delay: $dish-display * $i;
+                 }
+            }
+            @include tablet {
+                margin-top: 25px;
+            }
             &:hover > .menu__check {
                 width: 60px;
                 .fa-circle-check {
@@ -155,8 +202,8 @@ main {
             .menu__check {
                 background-color: $tertiaryColor;
                 color: white;
-                height: 76.01px;
                 width: 0;
+                height: 76.01px;
                 border-radius: 0 14px 14px 0;
                 overflow: hidden;
                 transition-duration: 700ms;
@@ -170,18 +217,21 @@ main {
             }
             .bubble__text {
                 justify-content: space-between;
+                align-items: flex-end;
                 padding: 15px;
                 width: 95%;
             }
             .title {
                 width: 80%;
-                max-width: 246px;
                 h3 {
                     margin: 0;
                     font-size: 1.2rem;
                     white-space:nowrap;
                     text-overflow: ellipsis;
                     overflow: hidden;
+                    @include tablet {
+                        font-size: 1.25rem;
+                    }
                 }
                 p {
                     font-size: 1.03rem;
@@ -189,10 +239,16 @@ main {
                     white-space:nowrap;
                     text-overflow: ellipsis;
                     overflow: hidden;
+                    @include tablet {
+                        font-size: 1.15rem;
+                    }
                 }
             }
             span {
                 font-weight: bold;
+                @include tablet {
+                    font-size: 1.15rem;
+                }
             }
         }
     }

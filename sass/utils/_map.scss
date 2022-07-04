@@ -1,21 +1,4 @@
-/*$btn-background-color: (
-    basic: (
-        bg: linear-gradient($secondaryColor, $primaryColor),
-        shadow: 0px 5px 15px -3px darken($backgroundColor, 40%),
-    ),
-    hover: (
-        bg: linear-gradient(
-            lighten($secondaryColor, 2%),
-            lighten($primaryColor, 2%)),
-        shadow: 0px 5px 15px 0px darken($backgroundColor, 42%),     
-    )
-);*/ 
-
-/*$btn-background-opacity: (
-    basic: (
-        opacity: 1,
-    ),
-    hover: (
-        opacity: 0.9,
-    )
-);*/
+$breakpoints: (
+    tablet: 650px,
+    desktop: 800px,
+);

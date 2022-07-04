@@ -46,6 +46,21 @@
     transform: translateY(0%);
   }
 }
+@keyframes dishes {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .screen-loader {
   position: fixed;
   background-color: white;
@@ -84,35 +99,6 @@
   animation-delay: 1300ms;
 }
 
-/*$btn-background-color: (
-    basic: (
-        bg: linear-gradient($secondaryColor, $primaryColor),
-        shadow: 0px 5px 15px -3px darken($backgroundColor, 40%),
-    ),
-    hover: (
-        bg: linear-gradient(
-            lighten($secondaryColor, 2%),
-            lighten($primaryColor, 2%)),
-        shadow: 0px 5px 15px 0px darken($backgroundColor, 42%),     
-    )
-);*/
-/*$btn-background-opacity: (
-    basic: (
-        opacity: 1,
-    ),
-    hover: (
-        opacity: 0.9,
-    )
-);*/
-/*@mixin btn-background-color($state) {
-    $btn: map-get($btn-background-color, $state);
-    background: map-get($btn, bg);
-    box-shadow: map-get($btn, shadow);
-}*/
-/*@mixin btn-background-opacity($state) {
-    $opacity: map-get($btn-background-opacity, $state);
-    opacity: map-get($opacity, opacity);
-}*/
 * {
   box-sizing: border-box;
   font-family: "robotoregular";
@@ -241,6 +227,14 @@ article .steps {
   padding-left: 12.5px;
   margin: 0 auto;
 }
+@media screen and (min-width: 650px) {
+  article .steps {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1600px;
+    padding: 6.5px 0 0 6.5px;
+  }
+}
 article .steps .step {
   position: relative;
   justify-content: flex-start;
@@ -252,6 +246,15 @@ article .steps .step {
   padding-left: 35px;
   box-shadow: 0px 5px 15px -3px #b6b6b6;
 }
+@media screen and (min-width: 650px) {
+  article .steps .step {
+    flex-direction: column;
+    justify-content: center;
+    height: 125px;
+    width: 30%;
+    padding: 15px;
+  }
+}
 article .steps .step .number {
   position: absolute;
   left: -12.5px;
@@ -262,6 +265,13 @@ article .steps .step .number {
   border-radius: 50px;
   width: 25px;
   height: 25px;
+}
+@media screen and (min-width: 650px) {
+  article .steps .step .number {
+    top: -6.5px;
+    left: -6.5px;
+    font-size: 1rem;
+  }
 }
 article .steps .step .fa-solid {
   font-size: 1.3rem;
@@ -276,6 +286,13 @@ article .steps .step span {
   margin-left: 35px;
   font-size: 1rem;
   font-weight: bold;
+}
+@media screen and (min-width: 650px) {
+  article .steps .step span {
+    margin: 15px 0 0 0;
+    text-align: center;
+    font-size: 1.15rem;
+  }
 }
 
 main img {
@@ -298,8 +315,21 @@ main section {
   padding: 30px 0 70px 0;
   margin-bottom: -45px;
 }
+@media screen and (min-width: 650px) {
+  main section {
+    padding-top: 50px;
+  }
+}
+main section .container {
+  max-width: 550px;
+}
 main section article {
   padding: 25px 0 0 0;
+}
+@media screen and (min-width: 650px) {
+  main section article {
+    padding-top: 35px;
+  }
 }
 main section .container__title {
   justify-content: flex-start;
@@ -307,6 +337,11 @@ main section .container__title {
 main section .container__title h1 {
   margin: 0;
   font-size: 1.8rem;
+}
+@media screen and (min-width: 650px) {
+  main section .container__title h1 {
+    font-size: 1.9rem;
+  }
 }
 main section .container__title .title-heart {
   flex: 1;
@@ -332,6 +367,11 @@ main section .menu h2 {
   font-size: 1.05rem;
   margin-bottom: 7px;
 }
+@media screen and (min-width: 650px) {
+  main section .menu h2 {
+    font-size: 1.15rem;
+  }
+}
 main section .line {
   width: 45px;
   height: 3px;
@@ -340,9 +380,46 @@ main section .menu__bubble {
   justify-content: space-between;
   align-items: flex-end;
   background-color: white;
+  margin: 15px auto 0 auto;
   border-radius: 15px;
-  margin-top: 15px;
   box-shadow: 0px 5px 15px -3px #b6b6b6;
+  animation: dishes 2000ms ease-in-out forwards;
+  opacity: 0;
+}
+main section .menu__bubble--1 {
+  animation-delay: 130ms;
+}
+main section .menu__bubble--2 {
+  animation-delay: 260ms;
+}
+main section .menu__bubble--3 {
+  animation-delay: 390ms;
+}
+main section .menu__bubble--4 {
+  animation-delay: 520ms;
+}
+main section .menu__bubble--5 {
+  animation-delay: 650ms;
+}
+main section .menu__bubble--6 {
+  animation-delay: 780ms;
+}
+main section .menu__bubble--7 {
+  animation-delay: 910ms;
+}
+main section .menu__bubble--8 {
+  animation-delay: 1040ms;
+}
+main section .menu__bubble--9 {
+  animation-delay: 1170ms;
+}
+main section .menu__bubble--10 {
+  animation-delay: 1300ms;
+}
+@media screen and (min-width: 650px) {
+  main section .menu__bubble {
+    margin-top: 25px;
+  }
 }
 main section .menu__bubble:hover > .menu__check {
   width: 60px;
@@ -353,8 +430,8 @@ main section .menu__bubble:hover > .menu__check .fa-circle-check {
 main section .menu__bubble .menu__check {
   background-color: #99E2D0;
   color: white;
-  height: 76.01px;
   width: 0;
+  height: 76.01px;
   border-radius: 0 14px 14px 0;
   overflow: hidden;
   transition-duration: 700ms;
@@ -367,12 +444,12 @@ main section .menu__bubble .menu__check .fa-circle-check {
 }
 main section .menu__bubble .bubble__text {
   justify-content: space-between;
+  align-items: flex-end;
   padding: 15px;
   width: 95%;
 }
 main section .menu__bubble .title {
   width: 80%;
-  max-width: 246px;
 }
 main section .menu__bubble .title h3 {
   margin: 0;
@@ -381,6 +458,11 @@ main section .menu__bubble .title h3 {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+@media screen and (min-width: 650px) {
+  main section .menu__bubble .title h3 {
+    font-size: 1.25rem;
+  }
+}
 main section .menu__bubble .title p {
   font-size: 1.03rem;
   margin: 5px 0 0 0;
@@ -388,11 +470,35 @@ main section .menu__bubble .title p {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+@media screen and (min-width: 650px) {
+  main section .menu__bubble .title p {
+    font-size: 1.15rem;
+  }
+}
 main section .menu__bubble span {
   font-weight: bold;
 }
+@media screen and (min-width: 650px) {
+  main section .menu__bubble span {
+    font-size: 1.15rem;
+  }
+}
 
-figure {
+@media screen and (min-width: 650px) {
+  .container__restaurant-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 650px) {
+  .container__restaurant-cards a {
+    width: 48%;
+    height: 230px;
+    margin-bottom: 25px;
+  }
+}
+.container__restaurant-cards figure {
   position: relative;
   width: 100%;
   height: 250px;
@@ -401,13 +507,24 @@ figure {
   margin: 0 0 20px 0;
   box-shadow: 0px 5px 15px -3px #b6b6b6;
 }
-figure img {
+@media screen and (min-width: 650px) {
+  .container__restaurant-cards figure {
+    height: 100%;
+    margin: 0;
+  }
+}
+.container__restaurant-cards figure img {
   width: 100%;
   height: 166px;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
-figure .new {
+@media screen and (min-width: 650px) {
+  .container__restaurant-cards figure img {
+    height: 156px;
+  }
+}
+.container__restaurant-cards figure .new {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -417,30 +534,55 @@ figure .new {
   font-size: 0.9rem;
   font-weight: bold;
 }
-figure figcaption {
+@media screen and (min-width: 650px) {
+  .container__restaurant-cards figure .new {
+    font-size: 1rem;
+  }
+}
+.container__restaurant-cards figure figcaption {
   position: relative;
   padding: 15px 15px;
 }
-figure figcaption h4 {
+@media screen and (min-width: 650px) {
+  .container__restaurant-cards figure figcaption {
+    padding-top: 10px;
+  }
+}
+.container__restaurant-cards figure figcaption h4 {
   margin: 0;
   font-size: 1.2rem;
 }
-figure figcaption h3 {
+@media screen and (min-width: 650px) {
+  .container__restaurant-cards figure figcaption h4 {
+    font-size: 1.25rem;
+  }
+}
+.container__restaurant-cards figure figcaption h3 {
   margin: 5px 0 0 0;
   font-size: 1.1rem;
 }
-figure figcaption .heart {
+@media screen and (min-width: 650px) {
+  .container__restaurant-cards figure figcaption h3 {
+    font-size: 1.15rem;
+  }
+}
+.container__restaurant-cards figure figcaption .heart {
   position: absolute;
   top: 20px;
   right: 25px;
   font-size: 1.5rem;
 }
-figure figcaption .fa-solid {
+@media screen and (min-width: 650px) {
+  .container__restaurant-cards figure figcaption .heart {
+    top: 10px;
+  }
+}
+.container__restaurant-cards figure figcaption .fa-solid {
   color: #9356DC;
   opacity: 0;
   transition: opacity 400ms;
 }
-figure figcaption .fa-solid:hover {
+.container__restaurant-cards figure figcaption .fa-solid:hover {
   opacity: 1;
 }
 
@@ -454,6 +596,11 @@ figure figcaption .fa-solid:hover {
   box-shadow: 0px 5px 15px -3px #909090;
   background: linear-gradient(#FF79DA, #9356DC);
   opacity: 1;
+}
+@media screen and (min-width: 650px) {
+  .btn {
+    font-size: 1.15rem;
+  }
 }
 .btn::after {
   content: "";
@@ -474,7 +621,6 @@ figure figcaption .fa-solid:hover {
 }
 .btn a {
   color: white;
-  text-align: center;
 }
 .btn--center {
   margin: 50px auto 0 auto;
@@ -491,10 +637,29 @@ footer ul {
   line-height: 1.7;
   font-size: 1.05rem;
 }
+@media screen and (min-width: 650px) {
+  footer ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-size: 1.15rem;
+  }
+}
+@media screen and (min-width: 650px) {
+  footer ul li {
+    width: 50%;
+    margin-bottom: 5px;
+  }
+}
 footer h5 {
   margin: 0;
   font-size: 1.25rem;
   font-weight: lighter;
+}
+@media screen and (min-width: 650px) {
+  footer h5 {
+    font-size: 1.4rem;
+  }
 }
 footer a {
   color: white;

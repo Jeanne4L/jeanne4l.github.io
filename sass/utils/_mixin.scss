@@ -1,10 +1,5 @@
-/*@mixin btn-background-color($state) {
-    $btn: map-get($btn-background-color, $state);
-    background: map-get($btn, bg);
-    box-shadow: map-get($btn, shadow);
-}*/ 
-
-/*@mixin btn-background-opacity($state) {
-    $opacity: map-get($btn-background-opacity, $state);
-    opacity: map-get($opacity, opacity);
-}*/
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        @content; 
+    }
+}

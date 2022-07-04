@@ -4,11 +4,26 @@ footer {
     ul {
         line-height: 1.7;
         font-size: 1.05rem;
+        @include tablet {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            font-size: 1.15rem;
+        }
+        li {
+            @include tablet {
+                width: 50%;
+                margin-bottom: 5px;
+            }
+        }
     }
     h5 {
         margin: 0;
         font-size: 1.25rem;
         font-weight: lighter;
+        @include tablet {
+            font-size: 1.4rem;
+        }
     }
     a {
         color: white;
