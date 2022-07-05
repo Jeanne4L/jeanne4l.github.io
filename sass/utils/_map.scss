@@ -1,6 +1,23 @@
+$bg-img: (
+    size: auto 700px,
+    position: -40%,
+    repeat: no-repeat,
+    attachment: fixed,
+);
+
+$flex: (
+    display: flex,
+    content: center,
+    items: center,
+);
+
 $breakpoints: (
     large-mobile: 500px,
     tablet: 650px,
     laptop: 800px,
     desktop: 990px,
 );
+
+
+
+

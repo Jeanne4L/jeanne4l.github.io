@@ -1,138 +1,163 @@
-.location {
-    align-items: center;
+.location__div {
+    @include flex;
     box-shadow: inset 0px 13px 14px -13px darken($backgroundColor, 25%);
     p {
         width: 170px;
         .fa-location-dot {
             font-size: 1.1rem;
+            @include laptop {
+                font-size: 1rem;
+            }
         }
         span {
             margin-left: 16px;
             font-size: 1.12rem;
+            @include laptop {
+                font-size: 1rem;
+            }
         }
     }
 }
-.reservation {
-    padding: 40px 0 60px 0;
+.reservation__section {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 40px 0 60px 0;
+    &--gray {
+        background-color: $backgroundColor;
+    }
     h2 {
         text-align: center;
         width: 70%;
         margin: 0; 
-        font-size: 1.5rem;
     }
     h3 {
         text-align: center;
         font-size: 1.2rem;
         margin: 15px 0 30px 0;
         width: 90%;
+        @include laptop {
+            font-size: 1.1rem;
+        }
     } 
 }
 
 
 .functioning {
-    h2 {
-        margin-bottom: 30px;
-        @include desktop {
-            margin: 0 auto 30px auto;
+    &__div {
+        h2 {
+            margin-bottom: 30px;
+            @include desktop {
+                margin: 0 auto 30px auto;
+            }
         }
-    }
-    .steps {
-        flex-direction: column;
-        max-width: 410px;
-        padding-left: 12.5px;
-        margin: 0 auto;
-        @include tablet {
-            flex-direction: row;
-            justify-content: space-between;
-            max-width: 1600px;
-            padding: 6.5px 0 0 6.5px;
-        }
-        @include desktop {
-            padding: 0;
-        }
-        .step {
-            position: relative;
-            justify-content: flex-start;
-            align-items: center;
-            width: 100%;
-            height: 75px;
-            border-radius: 20px;
-            margin-bottom: 25px;
-            padding-left: 35px;
-            box-shadow: 0px 5px 15px -3px darken($backgroundColor, 25%);
+        .functioning__steps {
+            display: flex;
+            flex-direction: column;
+            max-width: 410px;
+            padding-left: 12.5px;
+            margin: 0 auto;
             @include tablet {
-                flex-direction: column;
-                justify-content: center;
-                height: 125px;
-                width: 30%;
-                padding: 15px;
+                flex-direction: row;
+                justify-content: space-between;
+                max-width: 1600px;
+                padding: 6.5px 0 0 6.5px;
             }
             @include desktop {
-                flex-direction: row;
-                justify-content: center;
-                /*padding: 20px 20px 20px 30px;*/
-                max-width: 350px;
+                padding: 17.5px 0 0 0;
             }
-            .number {
-                position: absolute;
-                left: -12.5px;
-                align-items: center;
-                font-size: .9rem;
-                color: white;
-                background-color: $primaryColor;
-                border-radius: 50px;
-                width: 25px;
-                height: 25px;
+            .step {
+                @include flex;
+                justify-content: flex-start;
+                position: relative;
+                width: 100%;
+                height: 75px;
+                border-radius: 20px;
+                margin-bottom: 25px;
+                padding-left: 35px;
+                box-shadow: 0px 5px 15px -3px darken($backgroundColor, 25%);
                 @include tablet {
-                    top: -6.5px;
-                    left: -6.5px;
-                    font-size: 1rem;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 125px;
+                    width: 30%;
+                    padding: 15px;
                 }
                 @include desktop {
-                    left: 44%;
-                    top: -17.5px;
-                    width: 35px;
-                    height: 35px;
+                    flex-direction: row;
+                    justify-content: center;
+                    max-width: 350px;
                 }
-            }
-            .fa-solid {
-                font-size: 1.3rem;
-                @include desktop {
-                    font-size: 1.4rem;
+                &--gray {
+                    background-color: $backgroundColor;
+                }
+                &--violet {
+                    background-color: rgba($primaryColor, .12);
+                }
+                .number {
+                    @include flex;
                     position: absolute;
-                    left: 7%;
+                    left: -12.5px;
+                    font-size: .9rem;
+                    color: white;
+                    background-color: $primaryColor;
+                    border-radius: 50px;
+                    width: 25px;
+                    height: 25px;
+                    @include tablet {
+                        top: -6.5px;
+                        left: -6.5px;
+                        font-size: 1rem;
+                    }
+                    @include desktop {
+                        left: 44%;
+                        top: -17.5px;
+                        width: 35px;
+                        height: 35px;
+                    }
+                }
+                .fa-solid {
+                    font-size: 1.3rem;
+                    @include laptop {
+                        font-size: 1.3rem;
+                    }
+                    @include desktop {
+                        position: absolute;
+                        left: 7%;
+                    }
+                }
+                .fa-mobile-screen-button, .fa-list-ul {
+                    color: darken($backgroundColor, 45%);
+                }
+                .fa-store {
+                    color: $primaryColor;
+                }
+                span {
+                    margin-left: 35px;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    @include tablet {
+                        margin: 15px 0 0 0;
+                        text-align: center;
+                        font-size: 1.15rem;
+                    }
+                    @include laptop {
+                        margin-top: 20px;
+                        font-size: 1.1rem;
+                    }
+                    @include desktop {
+                        margin: 0 0 0 25px;
+                    }
                 }
             }
-            .fa-mobile-screen-button, .fa-list-ul {
-                color: darken($backgroundColor, 45%);
-            }
-            .fa-store {
-                color: $primaryColor;
-            }
-            span {
-                margin-left: 35px;
-                font-size: 1rem;
-                font-weight: bold;
-                @include tablet {
-                    margin: 15px 0 0 0;
-                    text-align: center;
-                    font-size: 1.15rem;
-                }
-                @include laptop {
-                    margin-top: 20px;
-                }
-                @include desktop {
-                    margin: 0 0 0 25px;
-                    font-size: 1.2rem;
-                }
-            }
-        }
-    }    
+        }    
+    }
 }
 
-.restaurant {
+.restaurant__div {
+    &--gray {
+        background-color: $backgroundColor;
+    }
     h2 {
         margin-bottom: 30px;
     }
@@ -148,7 +173,11 @@
                 height: 230px;
                 margin-bottom: 25px;
             }
-        } 
+            @include desktop {
+                /*width: 23%;*/
+                height: 270px;
+            } 
+        }
     }
 }
 
@@ -166,6 +195,9 @@ main {
         @include laptop {
             height: 325px;
         }
+        @include desktop {
+            display: none;
+        }
     }
     section {
         flex-direction: column;
@@ -181,7 +213,15 @@ main {
         @include tablet {
             padding-top: 50px;
         }
+        @include desktop {
+            width: 50%;
+            border-radius: 40px 0 0 40px;
+            top: 0;
+            right: -50%;
+            margin-bottom: 0;
+        }
         .container {
+            width: 85%;
             max-width: 550px;
         }
         article {
@@ -189,14 +229,21 @@ main {
             @include tablet {
                 padding-top: 35px;
             }
+            @include desktop {
+                padding-top: 15px;
+            }
         }
         .container__title {
+            display: flex;
             justify-content: flex-start;
             h1 {
                 margin: 0;
                 font-size: 1.8rem;
                 @include tablet {
                     font-size: 1.9rem;
+                }
+                @include desktop {
+                    font-size: 1.5rem;
                 }
             }
             .title-heart {
@@ -205,111 +252,142 @@ main {
                 height: 33.11px;
                 position: relative;
             }
-            .menu-heart {
+            .heart-icon {
                 position: absolute;
                 right: 20px;
                 font-size: 1.6rem;
+                @include desktop {
+                    font-size: 1.5rem;
+                }
             }
             .fa-solid {
                 color: $primaryColor;
                 opacity: 0;
                 transition: opacity 400ms;
-                &:hover {
+                &:hover, &:active {
                     opacity: 1;
                 }
             }
         }
-        .menu h2 {
-            text-transform: uppercase;
-            font-size: 1.05rem;
-            margin-bottom: 7px;
-            @include tablet {
-                font-size: 1.15rem;
-            }
-        }
-        .line {
-            width: 45px;
-            height: 3px;
-        }
-        .menu__bubble {
-            justify-content: space-between;
-            align-items: flex-end;
-            background-color: white;
-            margin: 15px auto 0 auto;
-            border-radius: 15px;
-            box-shadow: 0px 5px 15px -3px darken($backgroundColor, 25%);
-            animation: dishes $progress-dur ease-in-out forwards;
-            opacity: 0;
-            overflow: hidden;
-            @for $i from 1 through $dish-num {
-                &--#{$i} {
-                    animation-delay: $dish-display * $i;
-                 }
-            }
-            @include tablet {
-                margin-top: 25px;
-            }
-            &:hover > .menu__check {
-                width: 60px;
-                .fa-circle-check {
-                    transform: translateX(0) rotate(360deg);
+        .menu {
+            h2 {
+                text-transform: uppercase;
+                font-size: 1.05rem;
+                margin-bottom: 7px;
+                @include tablet {
+                    font-size: 1.15rem;
+                }
+                @include desktop {
+                    font-size: .9rem;
                 }
             }
-            .menu__check {
+            &__line {
+                width: 45px;
+                height: 3px;
                 background-color: $tertiaryColor;
-                color: white;
-                width: 0;
-                height: 76.01px;
-                border-radius: 0 14px 14px 0;
-                overflow: hidden;
-                transition-duration: 700ms;
-                
-                .fa-circle-check {
-                    font-size: 1.2rem;
-                    transition: transform 700ms;
-                    width: 23px;
-                    height: 23px;
-                }
             }
-            .bubble__text {
+            &__bubble {
+                display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
-                padding: 15px;
-                width: 95%;
-            }
-            .title {
-                width: 80%;
-                max-width: 246px;
-                @include large-mobile {
-                    max-width: 320px;
-                }
-                h3 {
-                    margin: 0;
-                    font-size: 1.2rem;
-                    white-space:nowrap;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    @include tablet {
-                        font-size: 1.25rem;
+                background-color: white;
+                margin: 15px auto 0 auto;
+                border-radius: 15px;
+                box-shadow: 0px 5px 15px -3px darken($backgroundColor, 25%);
+                animation: dishes $progress-dur ease-in-out forwards;
+                opacity: 0;
+                overflow: hidden;
+                @for $i from 1 through $dish-num {
+                    &--#{$i} {
+                        animation-delay: $dish-display * $i;
                     }
                 }
-                p {
-                    font-size: 1.03rem;
-                    margin: 5px 0 0 0;
-                    white-space:nowrap;
-                    text-overflow: ellipsis;
+                @include tablet {
+                    margin-top: 25px;
+                    height: 79.15px;
+                }
+                @include desktop {
+                    height: 69.95px;
+                }
+                &:hover > .menu__check {
+                    width: 60px;
+                    .fa-circle-check {
+                        transform: translateX(0) rotate(360deg);
+                    }
+                }
+                .menu__check {
+                    @include flex;
+                    background-color: $tertiaryColor;
+                    color: white;
+                    width: 0;
+                    height: 76.01px;
+                    border-radius: 0 14px 14px 0;
                     overflow: hidden;
+                    transition-duration: 700ms;
+                    @include tablet {
+                        height: 79.15px;
+                    }
+                    @include desktop {
+                        height: 69.95px;
+                    }              
+                    .fa-circle-check {
+                        font-size: 1.2rem;
+                        transition: transform 700ms;
+                        width: 23px;
+                        height: 23px;
+                    }
+                }
+                .bubble__text {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    padding: 15px;
+                    width: 95%;
+                }
+                .bubble__title {
+                    width: 80%;
+                    max-width: 246px;
+                    @include large-mobile {
+                        max-width: 320px;
+                    }
+                    h3 {
+                        margin: 0;
+                        font-size: 1.2rem;
+                        white-space:nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        @include tablet {
+                            font-size: 1.25rem;
+                        }
+                        @include desktop {
+                            font-size: 1rem;
+                        }
+                    }
+                    p {
+                        font-size: 1.03rem;
+                        margin: 5px 0 0 0;
+                        white-space:nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        @include tablet {
+                            font-size: 1.15rem;
+                        }
+                        @include desktop {
+                            font-size: .9rem;
+                        }
+                    }
+                }
+                span {
+                    font-weight: bold;
                     @include tablet {
                         font-size: 1.15rem;
                     }
-                }
-            }
-            span {
-                font-weight: bold;
-                @include tablet {
-                    font-size: 1.15rem;
+                    @include desktop {
+                        font-size: .9rem;
+                    }
                 }
             }
         }
     }
 }
+

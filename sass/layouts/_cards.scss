@@ -18,8 +18,12 @@ figure {
         @include tablet {
             height: 156px;
         }
+        @include desktop {
+            height: 186px;
+        }
     }
     .new {
+        @include flex;
         position: absolute;
         top: 15px;
         right: 15px;
@@ -30,6 +34,9 @@ figure {
         font-weight: bold;
         @include tablet {
             font-size: 1rem;
+        }
+        @include laptop {
+            font-size: .9rem;
         }
     }
     figcaption {
@@ -44,12 +51,18 @@ figure {
             @include tablet {
                 font-size: 1.25rem;
             }
+            @include laptop {
+                font-size: 1.15rem;
+            }
         }
         h3 {
             margin: 5px 0 0 0;
             font-size: 1.1rem;
             @include tablet {
                 font-size: 1.15rem;
+            }
+            @include laptop {
+                font-size: 1.05rem;
             }
         }
         .heart {
@@ -65,7 +78,7 @@ figure {
             color: $primaryColor;
             opacity: 0;
             transition: opacity 400ms;
-            &:hover {
+            /*&:hover, */&:active {
                 opacity: 1;
             }
         }

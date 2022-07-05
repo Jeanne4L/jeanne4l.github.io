@@ -1,16 +1,14 @@
-.screen-loader {
+.screen {
+    @include flex;
     position: fixed;
     background-color: white; 
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: loader-screen 1ms 3000ms linear forwards;
+    animation: loading-screen 1ms 3000ms linear forwards;
     z-index: 20;
-    .loader {
+    .loading-spinner {
         display: flex;
         justify-content: space-evenly;
         width: 150px;
@@ -22,7 +20,7 @@
             height: 25px;
             border-radius: 50px;
             background: linear-gradient(#FF79DA, #9356DC);
-            animation: circle $anim-dur ease-in-out;
+            animation: loading-circle $anim-dur ease-in-out;
             @for $i from 1 through $circle-num {
                 &--#{$i} {
                     animation-delay: $anim-delay * $i;

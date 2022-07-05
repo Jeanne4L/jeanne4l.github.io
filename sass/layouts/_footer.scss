@@ -10,10 +10,21 @@ footer {
             flex-wrap: wrap;
             font-size: 1.15rem;
         }
+        @include laptop {
+            font-size: 1rem;
+        }
         li {
             @include tablet {
                 width: 50%;
                 margin-bottom: 5px;
+            }
+            @include laptop {
+                width: 30%;
+            }
+            &:last-child {
+                @include laptop {
+                    width: 10%;
+                }
             }
         }
     }
@@ -23,6 +34,9 @@ footer {
         font-weight: lighter;
         @include tablet {
             font-size: 1.4rem;
+        }
+        @include laptop {
+            font-size: 1.2rem;
         }
     }
     a {
