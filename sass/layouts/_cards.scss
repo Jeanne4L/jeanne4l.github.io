@@ -77,9 +77,8 @@ figure {
         .fa-solid {
             color: $primaryColor;
             opacity: 0;
-            transition: opacity 400ms;
-            /*&:hover, */&:active {
-                opacity: 1;
+            &:hover {
+                animation: heart 400ms forwards;
             }
         }
     }

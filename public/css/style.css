@@ -46,6 +46,14 @@
     transform: translateY(0%);
   }
 }
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes dishes {
   0% {
     transform: translateY(10px);
@@ -563,10 +571,9 @@ main section .container__title .heart-icon {
 main section .container__title .fa-solid {
   color: #9356DC;
   opacity: 0;
-  transition: opacity 400ms;
 }
-main section .container__title .fa-solid:hover, main section .container__title .fa-solid:active {
-  opacity: 1;
+main section .container__title .fa-solid:active {
+  animation: heart 400ms forwards;
 }
 main section .menu h2 {
   text-transform: uppercase;
@@ -844,11 +851,9 @@ figure figcaption .heart {
 figure figcaption .fa-solid {
   color: #9356DC;
   opacity: 0;
-  transition: opacity 400ms;
-  /*&:hover, */
 }
-figure figcaption .fa-solid:active {
-  opacity: 1;
+figure figcaption .fa-solid:hover {
+  animation: heart 400ms forwards;
 }
 
 .btn {
