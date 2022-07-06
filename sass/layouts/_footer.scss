@@ -1,6 +1,10 @@
 footer {
     padding: 25px 0;
     color: white;
+    @include desktop {
+        position: relative; 
+        z-index: 2;
+    }
     ul {
         line-height: 1.7;
         font-size: 1.05rem;

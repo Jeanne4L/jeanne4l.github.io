@@ -1,6 +1,6 @@
 .location__div {
     @include flex;
-    box-shadow: inset 0px 13px 14px -13px darken($backgroundColor, 25%);
+    box-shadow: inset 0px 13px 14px -13px darken($backgroundColor, 25%);      
     p {
         width: 170px;
         .fa-location-dot {
@@ -18,6 +18,7 @@
         }
     }
 }
+
 .reservation__section {
     display: flex;
     flex-direction: column;
@@ -41,7 +42,6 @@
         }
     } 
 }
-
 
 .functioning {
     &__div {
@@ -196,12 +196,14 @@ main {
             height: 325px;
         }
         @include desktop {
-            display: none;
+            position: fixed;
+            height: 100%;
+            width: auto;
+            z-index: 1;
         }
     }
     section {
         flex-direction: column;
-        align-items: center;
         position: relative;
         z-index: 2;
         top: -45px;
@@ -209,7 +211,7 @@ main {
         border-radius: 40px 40px 0 0;
         background-color: $backgroundColor;
         padding: 30px 0 70px 0;
-        margin-bottom: -45px;    
+        margin-bottom: -45px; 
         @include tablet {
             padding-top: 50px;
         }
@@ -225,7 +227,7 @@ main {
             max-width: 550px;
         }
         article {
-            padding: 25px 0 0 0;
+            padding: 25px 0 30px 0;
             @include tablet {
                 padding-top: 35px;
             }
@@ -263,7 +265,7 @@ main {
             .fa-solid {
                 color: $primaryColor;
                 opacity: 0;
-                &:active {
+                &:hover {
                     animation: heart 400ms forwards;
                 }
             }
@@ -284,6 +286,7 @@ main {
                 width: 45px;
                 height: 3px;
                 background-color: $tertiaryColor;
+                margin-bottom: 20px;
             }
             &__bubble {
                 display: flex;
@@ -303,10 +306,9 @@ main {
                 }
                 @include tablet {
                     margin-top: 25px;
-                    height: 79.15px;
                 }
                 @include desktop {
-                    height: 69.95px;
+                    height: 75.4px;
                 }
                 &:hover > .menu__check {
                     width: 60px;
@@ -319,15 +321,15 @@ main {
                     background-color: $tertiaryColor;
                     color: white;
                     width: 0;
-                    height: 76.01px;
+                    height: 77.08px;
                     border-radius: 0 14px 14px 0;
                     overflow: hidden;
                     transition-duration: 700ms;
                     @include tablet {
-                        height: 79.15px;
+                        height: 80px;
                     }
                     @include desktop {
-                        height: 69.95px;
+                        height: 75.4px;
                     }              
                     .fa-circle-check {
                         font-size: 1.2rem;
@@ -368,8 +370,10 @@ main {
                         white-space:nowrap;
                         text-overflow: ellipsis;
                         overflow: hidden;
+                        height: 20px;
                         @include tablet {
                             font-size: 1.15rem;
+                            height: 22px;
                         }
                         @include desktop {
                             font-size: .9rem;

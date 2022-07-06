@@ -144,7 +144,7 @@ h2 {
   }
 }
 
-.menu, .restaurant__div, .functioning__div {
+.restaurant__div, .functioning__div {
   padding: 30px 0 50px 0;
 }
 
@@ -169,44 +169,6 @@ ul li {
   color: #278870;
 }
 
-@media screen and (min-width: 990px) {
-  .page-a-la-francaise {
-    background: url(../../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-    background-size: auto 700px;
-    background-position: -40%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-}
-@media screen and (min-width: 990px) {
-  .page-palette-du-gout {
-    background: url(../../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-    background-size: auto 700px;
-    background-position: -40%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-}
-@media screen and (min-width: 990px) {
-  .page-note-enchantee {
-    background: url(../../images/stil-u2Lp8tXIcjw-unsplash.jpg);
-    background-size: auto 700px;
-    background-position: -40%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 70%;
-  }
-}
-@media screen and (min-width: 990px) {
-  .page-delice-des-sens {
-    background: url(../../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-    background-size: auto 700px;
-    background-position: -40%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-}
-
 footer {
   background-color: #353535;
 }
@@ -217,6 +179,13 @@ footer {
   align-items: center;
 }
 
+@media screen and (min-width: 990px) {
+  header {
+    position: relative;
+    z-index: 2;
+    background-color: white;
+  }
+}
 header .container {
   display: flex;
   justify-content: center;
@@ -488,12 +457,14 @@ main img {
 }
 @media screen and (min-width: 990px) {
   main img {
-    display: none;
+    position: fixed;
+    height: 100%;
+    width: auto;
+    z-index: 1;
   }
 }
 main section {
   flex-direction: column;
-  align-items: center;
   position: relative;
   z-index: 2;
   top: -45px;
@@ -522,7 +493,7 @@ main section .container {
   max-width: 550px;
 }
 main section article {
-  padding: 25px 0 0 0;
+  padding: 25px 0 30px 0;
 }
 @media screen and (min-width: 650px) {
   main section article {
@@ -572,7 +543,7 @@ main section .container__title .fa-solid {
   color: #9356DC;
   opacity: 0;
 }
-main section .container__title .fa-solid:active {
+main section .container__title .fa-solid:hover {
   animation: heart 400ms forwards;
 }
 main section .menu h2 {
@@ -594,6 +565,7 @@ main section .menu__line {
   width: 45px;
   height: 3px;
   background-color: #99E2D0;
+  margin-bottom: 20px;
 }
 main section .menu__bubble {
   display: flex;
@@ -640,12 +612,11 @@ main section .menu__bubble--10 {
 @media screen and (min-width: 650px) {
   main section .menu__bubble {
     margin-top: 25px;
-    height: 79.15px;
   }
 }
 @media screen and (min-width: 990px) {
   main section .menu__bubble {
-    height: 69.95px;
+    height: 75.4px;
   }
 }
 main section .menu__bubble:hover > .menu__check {
@@ -661,19 +632,19 @@ main section .menu__bubble .menu__check {
   background-color: #99E2D0;
   color: white;
   width: 0;
-  height: 76.01px;
+  height: 77.08px;
   border-radius: 0 14px 14px 0;
   overflow: hidden;
   transition-duration: 700ms;
 }
 @media screen and (min-width: 650px) {
   main section .menu__bubble .menu__check {
-    height: 79.15px;
+    height: 80px;
   }
 }
 @media screen and (min-width: 990px) {
   main section .menu__bubble .menu__check {
-    height: 69.95px;
+    height: 75.4px;
   }
 }
 main section .menu__bubble .menu__check .fa-circle-check {
@@ -721,10 +692,12 @@ main section .menu__bubble .bubble__title p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  height: 20px;
 }
 @media screen and (min-width: 650px) {
   main section .menu__bubble .bubble__title p {
     font-size: 1.15rem;
+    height: 22px;
   }
 }
 @media screen and (min-width: 990px) {
@@ -910,6 +883,12 @@ figure figcaption .fa-solid:hover {
 footer {
   padding: 25px 0;
   color: white;
+}
+@media screen and (min-width: 990px) {
+  footer {
+    position: relative;
+    z-index: 2;
+  }
 }
 footer ul {
   line-height: 1.7;
