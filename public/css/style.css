@@ -128,10 +128,12 @@ h3, .menu h2 {
 body {
   margin: 0;
   width: 100%;
+  background-color: #F6F6F6;
 }
 
 .container {
   width: 90%;
+  max-width: 1215px;
   margin: auto;
 }
 
@@ -160,6 +162,10 @@ ul li {
   list-style-type: none;
 }
 
+header, .functioning__div {
+  background-color: white;
+}
+
 .location__div {
   background-color: #ececec;
 }
@@ -183,7 +189,6 @@ footer {
   header {
     position: relative;
     z-index: 2;
-    background-color: white;
   }
 }
 header .container {
@@ -255,9 +260,6 @@ header .container a {
   align-items: center;
   padding: 40px 0 60px 0;
 }
-.reservation__section--gray {
-  background-color: #F6F6F6;
-}
 .reservation__section h2 {
   text-align: center;
   width: 70%;
@@ -275,6 +277,15 @@ header .container a {
   }
 }
 
+@media screen and (min-width: 990px) {
+  .functioning__div {
+    width: 90%;
+    max-width: 1215px;
+    margin: 0 auto 25px auto;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px -3px #b6b6b6;
+  }
+}
 .functioning__div h2 {
   margin-bottom: 30px;
 }
@@ -410,9 +421,6 @@ header .container a {
   }
 }
 
-.restaurant__div--gray {
-  background-color: #F6F6F6;
-}
 .restaurant__div h2 {
   margin-bottom: 30px;
 }
@@ -461,6 +469,11 @@ main img {
     height: 100%;
     width: auto;
     z-index: 1;
+  }
+}
+@media screen and (min-width: 990px) {
+  main .large {
+    height: 150%;
   }
 }
 main section {
@@ -668,8 +681,8 @@ main section .menu__bubble .bubble__title h3 {
   margin: 0;
   font-size: 1.2rem;
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media screen and (min-width: 650px) {
   main section .menu__bubble .bubble__title h3 {

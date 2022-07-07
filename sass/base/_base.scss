@@ -19,10 +19,12 @@ h3, .menu h2 {
 body {
     margin: 0;
     width: 100%;
+    background-color: $backgroundColor;
 }
 
 .container {
-    width: 90%;
+    width: 90%; 
+    max-width: 1215px; 
     margin: auto;
 }
 
@@ -47,6 +49,10 @@ ul {
     li {
         list-style-type: none;
     }
+}
+
+header, .functioning__div {
+    background-color: white;
 }
 
 .location__div {

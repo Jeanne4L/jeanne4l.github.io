@@ -2,7 +2,6 @@ header {
     @include desktop {
         position: relative;
         z-index: 2;
-        background-color: white;
     }
     .container {
         @include flex;
