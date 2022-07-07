@@ -344,13 +344,10 @@ main {
                     align-items: flex-end;
                     padding: 15px;
                     width: 95%;
+                    overflow: hidden;
                 }
                 .bubble__title {
                     width: 80%;
-                    max-width: 246px;
-                    @include large-mobile {
-                        max-width: 320px;
-                    }
                     h3 {
                         margin: 0;
                         font-size: 1.2rem;

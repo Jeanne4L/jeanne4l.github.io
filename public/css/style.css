@@ -659,15 +659,10 @@ main section .menu__bubble .bubble__text {
   align-items: flex-end;
   padding: 15px;
   width: 95%;
+  overflow: hidden;
 }
 main section .menu__bubble .bubble__title {
   width: 80%;
-  max-width: 246px;
-}
-@media screen and (min-width: 500px) {
-  main section .menu__bubble .bubble__title {
-    max-width: 320px;
-  }
 }
 main section .menu__bubble .bubble__title h3 {
   margin: 0;
