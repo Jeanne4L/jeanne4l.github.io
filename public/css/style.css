@@ -646,7 +646,7 @@ main section .menu__bubble .menu__check {
   background-color: #99E2D0;
   color: white;
   width: 0;
-  height: 77.08px;
+  height: 83.23px;
   border-radius: 0 14px 14px 0;
   overflow: hidden;
   transition-duration: 700ms;
@@ -701,7 +701,7 @@ main section .menu__bubble .bubble__title p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  height: 20px;
+  height: 22px;
 }
 @media screen and (min-width: 650px) {
   main section .menu__bubble .bubble__title p {
