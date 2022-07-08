@@ -1,3 +1,40 @@
+/* ---------------------------------------- */
+/* ==            SUMMARY              */
+/*---------------------------------------- */
+
+/* L23  color */
+/* L35  polices */
+/* L61  keyframes */
+/* L115  loading spinner */
+/* L157  base */
+/* L239  header */
+/* L285 section */
+  /* L288  location */
+  /* L317  reservation */
+  /* L342  functioning */
+  /* L488  restaurant */
+  /* L513 menu pages */
+/* L799 cards */
+/* L913 button */
+/* L968 footer */
+
+
+/* ---------------------------------------- */
+/* ==       COLOR CODES           */
+/*---------------------------------------- */
+
+/*
+Violet (primary color) :			#9356DC
+Pink (secondary color) :		#FF79DA
+Mint (tertiary color) :      #99E2D0
+gray (background) :	        #F6F6F6
+Brown (footer background) :     #353535
+
+
+/* ---------------------------------------- */
+/* ==            POLICES              */
+/*---------------------------------------- */
+
 @font-face {
   font-family: "shrikhandregular";
   src: url("../../police/shrikhand/shrikhand-regular-webfont.eot");
@@ -19,6 +56,10 @@
   font-weight: normal;
   font-style: normal;
 }
+
+/* ---------------------------------------- */
+/* ==            KEYFRAMES              */
+/*---------------------------------------- */
 @keyframes loading-screen {
   0% {
     opacity: 1;
@@ -69,6 +110,11 @@
     opacity: 1;
   }
 }
+
+/* ---------------------------------------- */
+/* ==            LOADING SPINNER             */
+/*---------------------------------------- */
+
 .screen {
   display: flex;
   justify-content: center;
@@ -106,6 +152,10 @@
 .screen .loading-spinner__circle--3 {
   animation-delay: 1300ms;
 }
+
+/* ---------------------------------------- */
+/* ==            BASE              */
+/*---------------------------------------- */
 
 * {
   box-sizing: border-box;
@@ -185,6 +235,10 @@ footer {
   align-items: center;
 }
 
+/* ---------------------------------------- */
+/* ==            HEADER              */
+/*---------------------------------------- */
+
 @media screen and (min-width: 990px) {
   header {
     position: relative;
@@ -227,6 +281,12 @@ header .container a {
   }
 }
 
+/* ---------------------------------------- */
+/* ==            SECTION              */
+/*---------------------------------------- */
+
+/* ==           LOCATION             */
+
 .location__div {
   display: flex;
   justify-content: center;
@@ -254,6 +314,8 @@ header .container a {
   }
 }
 
+/* ==           RESERVATION             */
+
 .reservation__section {
   display: flex;
   flex-direction: column;
@@ -276,6 +338,8 @@ header .container a {
     font-size: 1.1rem;
   }
 }
+
+/* ==           FUNCTIONING             */
 
 @media screen and (min-width: 990px) {
   .functioning__div {
@@ -421,6 +485,8 @@ header .container a {
   }
 }
 
+/* ==           RESTAURANT             */
+
 .restaurant__div h2 {
   margin-bottom: 30px;
 }
@@ -440,10 +506,11 @@ header .container a {
 }
 @media screen and (min-width: 990px) {
   .restaurant__div .container__restaurant-cards a {
-    /*width: 23%;*/
     height: 270px;
   }
 }
+
+/* ==           MENU PAGES             */
 
 main img {
   position: relative;
@@ -728,6 +795,10 @@ main section .menu__bubble span {
   }
 }
 
+/* ---------------------------------------- */
+/* ==            CARDS              */
+/*---------------------------------------- */
+
 figure {
   position: relative;
   width: 100%;
@@ -838,6 +909,10 @@ figure figcaption .fa-solid:hover {
   animation: heart 400ms forwards;
 }
 
+/* ---------------------------------------- */
+/* ==            BUTTON              */
+/*---------------------------------------- */
+
 .btn {
   display: flex;
   justify-content: center;
@@ -888,6 +963,10 @@ figure figcaption .fa-solid:hover {
 .btn--smaller {
   width: 190px;
 }
+
+/* ---------------------------------------- */
+/* ==            FOOTER              */
+/*---------------------------------------- */
 
 footer {
   padding: 25px 0;
