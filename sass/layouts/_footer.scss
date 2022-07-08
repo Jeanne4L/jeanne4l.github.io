@@ -5,54 +5,70 @@ footer {
         position: relative; 
         z-index: 2;
     }
-    ul {
-        line-height: 1.7;
-        font-size: 1.05rem;
-        @include tablet {
+    .container {
+        @include desktop {
             display: flex;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-            font-size: 1.15rem;
         }
-        @include laptop {
-            font-size: 1rem;
-        }
-        li {
+        h5 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: lighter;
             @include tablet {
-                width: 50%;
-                margin-bottom: 5px;
+                font-size: 1.4rem;
             }
             @include laptop {
-                width: 30%;
+                font-size: 1.2rem;
             }
-            &:last-child {
+            @include desktop {
+                display: inline-block;
+                width: 20%;
+                display: flex;
+                align-items: center;
+            }
+        }
+        nav {
+            @include desktop {
+                flex: 1;
+            }
+            ul {
+                line-height: 1.7;
+                font-size: 1.05rem;
+                @include tablet {
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    font-size: 1.15rem;
+                }
                 @include laptop {
-                    width: 10%;
+                    font-size: 1rem;
+                }
+                li {
+                    @include tablet {
+                        width: 50%;
+                        margin-bottom: 5px;
+                    }
+                    @include laptop {
+                        width: 30%;
+                    }
+                    &:last-child {
+                        @include laptop {
+                            width: 10%;
+                        }
+                    }
                 }
             }
+            a {
+                color: white;
+            }
+            .fa-solid {
+                margin-right: 5px;
+            }
+            .fa-utensils {
+                font-size: .9rem;
+            }
+            .fa-handshake-angle {
+                font-size: .7rem;
+            }
         }
-    }
-    h5 {
-        margin: 0;
-        font-size: 1.25rem;
-        font-weight: lighter;
-        @include tablet {
-            font-size: 1.4rem;
-        }
-        @include laptop {
-            font-size: 1.2rem;
-        }
-    }
-    a {
-        color: white;
-    }
-    .fa-solid {
-        margin-right: 5px;
-    }
-    .fa-utensils {
-        font-size: .9rem;
-    }
-    .fa-handshake-angle {
-        font-size: .7rem;
     }
 }

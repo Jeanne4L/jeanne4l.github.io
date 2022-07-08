@@ -850,7 +850,6 @@ figure figcaption .fa-solid:hover {
   box-shadow: 0px 5px 15px -3px #909090;
   background: linear-gradient(#FF79DA, #9356DC);
   opacity: 1;
-  cursor: pointer;
 }
 @media screen and (min-width: 650px) {
   .btn {
@@ -899,12 +898,45 @@ footer {
     z-index: 2;
   }
 }
-footer ul {
+@media screen and (min-width: 990px) {
+  footer .container {
+    display: flex;
+  }
+}
+footer .container h5 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: lighter;
+}
+@media screen and (min-width: 650px) {
+  footer .container h5 {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  footer .container h5 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 990px) {
+  footer .container h5 {
+    display: inline-block;
+    width: 20%;
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 990px) {
+  footer .container nav {
+    flex: 1;
+  }
+}
+footer .container nav ul {
   line-height: 1.7;
   font-size: 1.05rem;
 }
 @media screen and (min-width: 650px) {
-  footer ul {
+  footer .container nav ul {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -912,51 +944,36 @@ footer ul {
   }
 }
 @media screen and (min-width: 800px) {
-  footer ul {
+  footer .container nav ul {
     font-size: 1rem;
   }
 }
 @media screen and (min-width: 650px) {
-  footer ul li {
+  footer .container nav ul li {
     width: 50%;
     margin-bottom: 5px;
   }
 }
 @media screen and (min-width: 800px) {
-  footer ul li {
+  footer .container nav ul li {
     width: 30%;
   }
 }
 @media screen and (min-width: 800px) {
-  footer ul li:last-child {
+  footer .container nav ul li:last-child {
     width: 10%;
   }
 }
-footer h5 {
-  margin: 0;
-  font-size: 1.25rem;
-  font-weight: lighter;
-}
-@media screen and (min-width: 650px) {
-  footer h5 {
-    font-size: 1.4rem;
-  }
-}
-@media screen and (min-width: 800px) {
-  footer h5 {
-    font-size: 1.2rem;
-  }
-}
-footer a {
+footer .container nav a {
   color: white;
 }
-footer .fa-solid {
+footer .container nav .fa-solid {
   margin-right: 5px;
 }
-footer .fa-utensils {
+footer .container nav .fa-utensils {
   font-size: 0.9rem;
 }
-footer .fa-handshake-angle {
+footer .container nav .fa-handshake-angle {
   font-size: 0.7rem;
 }
 
