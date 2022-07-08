@@ -312,6 +312,7 @@ main {
                 }
                 @include tablet {
                     margin-top: 25px;
+                    height: 85px;
                 }
                 @include desktop {
                     height: 75.4px;
@@ -332,7 +333,7 @@ main {
                     overflow: hidden;
                     transition-duration: 700ms;
                     @include tablet {
-                        height: 80px;
+                        height: 85px;
                     }
                     @include desktop {
                         height: 75.4px;
@@ -376,7 +377,7 @@ main {
                         height: 20px;
                         @include tablet {
                             font-size: 1.15rem;
-                            height: 22px;
+                            height: 24px;
                         }
                         @include desktop {
                             font-size: .9rem;

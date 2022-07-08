@@ -625,6 +625,7 @@ main section .menu__bubble--10 {
 @media screen and (min-width: 650px) {
   main section .menu__bubble {
     margin-top: 25px;
+    height: 85px;
   }
 }
 @media screen and (min-width: 990px) {
@@ -652,7 +653,7 @@ main section .menu__bubble .menu__check {
 }
 @media screen and (min-width: 650px) {
   main section .menu__bubble .menu__check {
-    height: 80px;
+    height: 85px;
   }
 }
 @media screen and (min-width: 990px) {
@@ -705,7 +706,7 @@ main section .menu__bubble .bubble__title p {
 @media screen and (min-width: 650px) {
   main section .menu__bubble .bubble__title p {
     font-size: 1.15rem;
-    height: 22px;
+    height: 24px;
   }
 }
 @media screen and (min-width: 990px) {
