@@ -1,4 +1,7 @@
 header {
+    height: 66px;
+    display: flex;
+    justify-content: flex-start;
     @include desktop {
         position: relative;
         z-index: 2;
@@ -10,23 +13,20 @@ header {
             width: 90%;
         }
         img {
-        width: 170px;
-        height: auto;
-        margin: 20px 0;
-        @include laptop {
-            width: 150px;
-        }
+            width: 170px;
+            height: auto;
+            margin: auto;
         }
         a {
-            position: absolute;
-            left: 20px;
-            font-size: 1.4rem;
-            color: lighten(black, 20%);
-            @include laptop {
-                left: 5%;
-                color: transparent;
-                width: 170px;
-                height: 30px;
+            &:nth-child(2) {
+                margin:auto;
+            }
+            i {
+                font-size: 1.4rem;
+                color: lighten(black, 20%);
+                @include desktop {
+                    display: none;
+                }
             }
         }
     }

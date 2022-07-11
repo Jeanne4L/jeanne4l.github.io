@@ -296,7 +296,7 @@ main {
             &__bubble {
                 display: flex;
                 justify-content: space-between;
-                align-items: flex-end;
+                align-items: center;
                 background-color: white;
                 margin: 15px auto 0 auto;
                 border-radius: 15px;
@@ -304,6 +304,7 @@ main {
                 animation: dishes $progress-dur ease-in-out forwards;
                 opacity: 0;
                 overflow: hidden;
+                height: 85px;
                 @for $i from 1 through $dish-num {
                     &--#{$i} {
                         animation-delay: $dish-display * $i;
@@ -311,10 +312,6 @@ main {
                 }
                 @include tablet {
                     margin-top: 25px;
-                    height: 85px;
-                }
-                @include desktop {
-                    height: 75.4px;
                 }
                 &:hover > .menu__check {
                     width: 60px;
@@ -322,33 +319,11 @@ main {
                         transform: translateX(0) rotate(360deg);
                     }
                 }
-                .menu__check {
-                    @include flex;
-                    background-color: $tertiaryColor;
-                    color: white;
-                    width: 0;
-                    height: 83.23px;
-                    border-radius: 0 14px 14px 0;
-                    overflow: hidden;
-                    transition-duration: 700ms;
-                    @include tablet {
-                        height: 85px;
-                    }
-                    @include desktop {
-                        height: 75.4px;
-                    }              
-                    .fa-circle-check {
-                        font-size: 1.2rem;
-                        transition: transform 700ms;
-                        width: 23px;
-                        height: 23px;
-                    }
-                }
                 .bubble__text {
                     display: flex;
                     justify-content: space-between;
                     align-items: flex-end;
-                    padding: 15px;
+                    padding: 0 15px;
                     width: 95%;
                     overflow: hidden;
                 }
@@ -373,10 +348,8 @@ main {
                         white-space:nowrap;
                         text-overflow: ellipsis;
                         overflow: hidden;
-                        height: 22px;
                         @include tablet {
                             font-size: 1.15rem;
-                            height: 24px;
                         }
                         @include desktop {
                             font-size: .9rem;
@@ -390,6 +363,22 @@ main {
                     }
                     @include desktop {
                         font-size: .9rem;
+                    }
+                }
+                .menu__check {
+                    @include flex;
+                    background-color: $tertiaryColor;
+                    color: white;
+                    width: 0;
+                    height: 85px;
+                    border-radius: 0 14px 14px 0;
+                    overflow: hidden;
+                    transition-duration: 700ms;             
+                    .fa-circle-check {
+                        font-size: 1.2rem;
+                        transition: transform 700ms;
+                        width: 23px;
+                        height: 23px;
                     }
                 }
             }

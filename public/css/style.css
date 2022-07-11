@@ -4,19 +4,19 @@
 
 /* L23  color */
 /* L35  polices */
-/* L61  keyframes */
-/* L115  loading spinner */
-/* L157  base */
-/* L239  header */
+/* L62  keyframes */
+/* L117  loading spinner */
+/* L159  base */
+/* L241  header */
 /* L285 section */
   /* L288  location */
   /* L317  reservation */
   /* L342  functioning */
   /* L488  restaurant */
   /* L513 menu pages */
-/* L799 cards */
-/* L913 button */
-/* L968 footer */
+/* L782 cards */
+/* L896 button */
+/* L951 footer */
 
 
 /* ---------------------------------------- */
@@ -34,6 +34,7 @@ Brown (footer background) :     #353535
 /* ---------------------------------------- */
 /* ==            POLICES              */
 /*---------------------------------------- */
+
 
 @font-face {
   font-family: "shrikhandregular";
@@ -60,6 +61,7 @@ Brown (footer background) :     #353535
 /* ---------------------------------------- */
 /* ==            KEYFRAMES              */
 /*---------------------------------------- */
+
 @keyframes loading-screen {
   0% {
     opacity: 1;
@@ -239,6 +241,11 @@ footer {
 /* ==            HEADER              */
 /*---------------------------------------- */
 
+header {
+  height: 66px;
+  display: flex;
+  justify-content: flex-start;
+}
 @media screen and (min-width: 990px) {
   header {
     position: relative;
@@ -259,25 +266,18 @@ header .container {
 header .container img {
   width: 170px;
   height: auto;
-  margin: 20px 0;
+  margin: auto;
 }
-@media screen and (min-width: 800px) {
-  header .container img {
-    width: 150px;
-  }
+header .container a:nth-child(2) {
+  margin: auto;
 }
-header .container a {
-  position: absolute;
-  left: 20px;
+header .container a i {
   font-size: 1.4rem;
   color: #333333;
 }
-@media screen and (min-width: 800px) {
-  header .container a {
-    left: 5%;
-    color: transparent;
-    width: 170px;
-    height: 30px;
+@media screen and (min-width: 990px) {
+  header .container a i {
+    display: none;
   }
 }
 
@@ -650,7 +650,7 @@ main section .menu__line {
 main section .menu__bubble {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   background-color: white;
   margin: 15px auto 0 auto;
   border-radius: 15px;
@@ -658,6 +658,7 @@ main section .menu__bubble {
   animation: dishes 2000ms ease-in-out forwards;
   opacity: 0;
   overflow: hidden;
+  height: 85px;
 }
 main section .menu__bubble--1 {
   animation-delay: 130ms;
@@ -692,12 +693,6 @@ main section .menu__bubble--10 {
 @media screen and (min-width: 650px) {
   main section .menu__bubble {
     margin-top: 25px;
-    height: 85px;
-  }
-}
-@media screen and (min-width: 990px) {
-  main section .menu__bubble {
-    height: 75.4px;
   }
 }
 main section .menu__bubble:hover > .menu__check {
@@ -706,39 +701,11 @@ main section .menu__bubble:hover > .menu__check {
 main section .menu__bubble:hover > .menu__check .fa-circle-check {
   transform: translateX(0) rotate(360deg);
 }
-main section .menu__bubble .menu__check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #99E2D0;
-  color: white;
-  width: 0;
-  height: 83.23px;
-  border-radius: 0 14px 14px 0;
-  overflow: hidden;
-  transition-duration: 700ms;
-}
-@media screen and (min-width: 650px) {
-  main section .menu__bubble .menu__check {
-    height: 85px;
-  }
-}
-@media screen and (min-width: 990px) {
-  main section .menu__bubble .menu__check {
-    height: 75.4px;
-  }
-}
-main section .menu__bubble .menu__check .fa-circle-check {
-  font-size: 1.2rem;
-  transition: transform 700ms;
-  width: 23px;
-  height: 23px;
-}
 main section .menu__bubble .bubble__text {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 15px;
+  padding: 0 15px;
   width: 95%;
   overflow: hidden;
 }
@@ -768,12 +735,10 @@ main section .menu__bubble .bubble__title p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  height: 22px;
 }
 @media screen and (min-width: 650px) {
   main section .menu__bubble .bubble__title p {
     font-size: 1.15rem;
-    height: 24px;
   }
 }
 @media screen and (min-width: 990px) {
@@ -793,6 +758,24 @@ main section .menu__bubble span {
   main section .menu__bubble span {
     font-size: 0.9rem;
   }
+}
+main section .menu__bubble .menu__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  color: white;
+  width: 0;
+  height: 85px;
+  border-radius: 0 14px 14px 0;
+  overflow: hidden;
+  transition-duration: 700ms;
+}
+main section .menu__bubble .menu__check .fa-circle-check {
+  font-size: 1.2rem;
+  transition: transform 700ms;
+  width: 23px;
+  height: 23px;
 }
 
 /* ---------------------------------------- */
