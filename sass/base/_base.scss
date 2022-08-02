@@ -1,19 +1,14 @@
 * {
     box-sizing: border-box;
-    font-family: 'robotoregular';
+    font-family: 'Roboto', sans-serif;
 }
 
 footer h5, h1 {
-    font-family: 'shrikhandregular';
+    font-family: 'Shrikhand', cursive;
 }
 
-h3, .menu h2 {
-    font-style: normal;
-    font-family: 'robotothin';
-}
-
-.menu__bubble h3 {
-    font-family: 'robotoregular';
+/*h3, .menu h2, */h4 {
+    font-weight: lighter;
 }
 
 body {

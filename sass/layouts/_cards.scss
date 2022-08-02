@@ -45,7 +45,7 @@ figure {
         @include tablet {
             padding-top: 10px; 
         }
-        h4 {
+        h3 {
             margin: 0;
             font-size: 1.2rem;
             @include tablet {
@@ -55,7 +55,7 @@ figure {
                 font-size: 1.15rem;
             }
         }
-        h3 {
+        h4 {
             margin: 5px 0 0 0;
             font-size: 1.1rem;
             @include tablet {
